@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PDFFile from "./components/pdf";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+// import PDFFile from "./components/pdf";
+// import { PDFDownloadLink } from "@react-pdf/renderer";
 // import Questionaire from "./components/questtionaire";
 
 const defaultFormFields = {
