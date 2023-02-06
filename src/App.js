@@ -982,17 +982,7 @@ const App = () => {
           1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Does the proposed business model appear
           to be commercially viable?
         </p>
-        <p
-          style={{
-            position: "absolute",
-     
-            left: "1149px",
-            whiteSpace: "nowrap",
-          }}
-          className="ft15"
-        >
-          1
-        </p>
+
         <input 
          type="number"
          min={0}
@@ -1073,17 +1063,7 @@ const App = () => {
           4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Does the presentation clearly
           identified a target market / customer for their project?
         </p>
-        <p
-          style={{
-            position: "absolute",
-
-            left: "1149px",
-            whiteSpace: "nowrap",
-          }}
-          className="ft15"
-        >
-          2
-        </p>
+      
         <input 
          type="number"
          min={0}
@@ -1192,17 +1172,6 @@ const App = () => {
           8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has the presentation identified third
           parties (e.g. contractors) if they are needed to successfully deliver
           the project?
-        </p>
-        <p
-          style={{
-            position: "absolute",
-
-            left: "1149px",
-            whiteSpace: "nowrap",
-          }}
-          className="ft15"
-        >
-          4
         </p>
         <input 
          type="number"
