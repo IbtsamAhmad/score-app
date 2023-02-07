@@ -1,64 +1,6 @@
-// import React, { useState } from "react";
-
-// const defaultFormFields = {
-//   a1: "",
-//   a2: "",
-// };
-// const Question = () => {
-//   const [formFields, setFormFields] = useState(defaultFormFields);
-//   const { a1, a2 } = formFields;
-
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-
-//     setFormFields({ ...formFields, [name]: value });
-   
-//   };
-
-//   console.log("fields", formFields)
-
-//   return (
-//     <div>
-
-//       <input
-//         className="form-input"
-//         onChange={handleChange}
-//         name="a1"
-//         value={a1}
-//       />
-//           <input
-//         className="form-input"
-//         onChange={handleChange}
-//         name="a2"
-//         value={a2}
-//       />
-//     </div>
-//   );
-// };
-
-// export default Question;
-
 
 import React, { useState } from "react";
-import PDFFile from "./components/pdf";
-// import { PDFDownloadLink } from "@react-pdf/renderer";
-// import Questionaire from "./components/questtionaire";
-
-const defaultFormFields = {
-  a1: "",
-  a2: "",
-};
-
 const App = () => {
-  const [formFields, setFormFields] = useState(defaultFormFields);
-  const { a1, a2 } = formFields;
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormFields({ ...formFields, [name]: value });
-  };
-
   return (
     <div className="app-container">
       <div
@@ -1550,13 +1492,6 @@ const App = () => {
           Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
         </p>
       </div>
-
-    
-
-      {/* <PDFDownloadLink document={<PDFFile />} filename="FORM">
-      {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
-      </PDFDownloadLink> 
-       <PDFFile /> */}
     </div>
   );
 };
