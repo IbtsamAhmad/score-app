@@ -5,7 +5,8 @@ import Pdf from "react-to-pdf";
 import "../../index.css";
 const ref = React.createRef();
 
-const Button = ()  =>{
+const Button = ({ formFields})  =>{
+  const { a1, a2, a3,a4,a5,a6,b1,b2,b3,b4 ,c1, c2, c3,c4,c5,c6,c7,d1, d2, d3,d4,d5,d6, e1, e2, e3,e4,e5,e6,e7,e8, f1,f2,f3,f4,f5,g1, g2, g3,g4,g5,g6,g7} = formFields;
   const options = {
     // orientation: 'landscape',
      unit: 'in',
@@ -139,7 +140,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {a1}
         </p>
         <p
           style={{
@@ -162,7 +163,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {a2}
         </p>
         <p
           style={{
@@ -185,7 +186,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {a3}
         </p>
         <p
           style={{
@@ -208,7 +209,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {a4}
         </p>
         <p
           style={{
@@ -231,7 +232,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {a5}
         </p>
         <p
           style={{
@@ -253,7 +254,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {a6}
         </p>
         <p
           style={{
@@ -321,7 +322,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {b1}
         </p>
         <p
           style={{
@@ -344,7 +345,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {b2}
         </p>
         <p
           style={{
@@ -367,7 +368,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {b3}
         </p>
         <p
           style={{
@@ -390,7 +391,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {b4}
         </p>
         <p
           style={{
@@ -458,7 +459,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {c1}
         </p>
         <p
           style={{
@@ -481,7 +482,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {c2}
         </p>
         <p
           style={{
@@ -504,7 +505,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {c3}
         </p>
         <p
           style={{
@@ -527,7 +528,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {c4}
         </p>
         <p
           style={{
@@ -550,7 +551,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {c5}
         </p>
         <p
           style={{
@@ -573,7 +574,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {c6}
         </p>
         <p
           style={{
@@ -596,7 +597,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {c7}
         </p>
         <p
           style={{
@@ -664,7 +665,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {d1}
         </p>
         <p
           style={{
@@ -687,7 +688,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {d2}
         </p>
         <p
           style={{
@@ -711,7 +712,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {d3}
         </p>
         <p
           style={{
@@ -734,7 +735,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {d4}
         </p>
         <p
           style={{
@@ -757,7 +758,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {d5}
         </p>
         <p
           style={{
@@ -780,7 +781,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {d6}
         </p>
         <p
           style={{
@@ -848,7 +849,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {e1}
         </p>
         <p
           style={{
@@ -871,7 +872,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {e2}
         </p>
         <p
           style={{
@@ -894,7 +895,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {e3}
         </p>
         <p
           style={{
@@ -917,7 +918,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {e4}
         </p>
         <p
           style={{
@@ -940,7 +941,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {e5}
         </p>
         <p
           style={{
@@ -963,7 +964,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {e6}
         </p>
         <p
           style={{
@@ -987,7 +988,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {e7}
         </p>
         <p
           style={{
@@ -1011,7 +1012,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {e8}
         </p>
         <p
           style={{
@@ -1079,7 +1080,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {f1}
         </p>
         <p
           style={{
@@ -1102,7 +1103,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {f2}
         </p>
         <p
           style={{
@@ -1125,7 +1126,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {f3}
         </p>
         <p
           style={{
@@ -1148,7 +1149,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {f4}
         </p>
         <p
           style={{
@@ -1171,7 +1172,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {f5}
         </p>
         <p
           style={{
@@ -1240,7 +1241,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {g1}
         </p>
         <p
           style={{
@@ -1263,7 +1264,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          3
+          {g2}
         </p>
         <p
           style={{
@@ -1286,7 +1287,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          5
+          {g3}
         </p>
         <p
           style={{
@@ -1309,7 +1310,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {g4}
         </p>
         <p
           style={{
@@ -1332,7 +1333,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          1
+          {g5}
         </p>
         <p
           style={{
@@ -1355,7 +1356,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          2
+          {g6}
         </p>
         <p
           style={{
@@ -1378,7 +1379,7 @@ const Button = ()  =>{
           }}
           className="ft15"
         >
-          4
+          {g7}
         </p>
         <p
           style={{

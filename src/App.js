@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import PDFFile from "./components/pdf";
 // import { PDFDownloadLink } from "@react-pdf/renderer";
-import File from "./components/File";
+import File from "./components/File/index";
 
 const defaultFormFields = {
   a1: 0,
@@ -58,19 +58,19 @@ const App = () => {
 
     setFormFields({ ...formFields, [name]: value });
   };
-
-
   console.log("formFields", formFields)
-
-
-
 
   return (
     <div className="app-container">
       {/* <h1 style={{color:"#00000"}}>Self-Score Your Pitch</h1> */}
       <div
         id="page1-div"
-        style={{ position: "relative", width: "1838px", height: "2601px" , marginTop:"-100px", marginLeft:"130px"}}
+        style={{ position: "relative", 
+        // width: "1838px",
+        // height: "2601px" , 
+        marginTop:"-100px",
+        // marginLeft:"130px"
+        }}
       >
         <img
           width={1838}
@@ -1738,7 +1738,7 @@ const App = () => {
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
       </PDFDownloadLink> 
        <PDFFile /> */}
-       <File/>
+       <File formFields={formFields}/>
     </div>
   );
 };
