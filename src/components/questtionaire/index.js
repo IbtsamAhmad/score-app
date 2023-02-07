@@ -41,8 +41,8 @@
 
 import React, { useState } from "react";
 import PDFFile from "./components/pdf";
-import { PDFDownloadLink } from "@react-pdf/renderer";
-import Questionaire from "./components/questtionaire";
+// import { PDFDownloadLink } from "@react-pdf/renderer";
+// import Questionaire from "./components/questtionaire";
 
 const defaultFormFields = {
   a1: "",
@@ -1553,10 +1553,10 @@ const App = () => {
 
     
 
-      <PDFDownloadLink document={<PDFFile />} filename="FORM">
+      {/* <PDFDownloadLink document={<PDFFile />} filename="FORM">
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
       </PDFDownloadLink> 
-       <PDFFile />
+       <PDFFile /> */}
     </div>
   );
 };
