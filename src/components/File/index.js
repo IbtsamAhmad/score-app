@@ -15,7 +15,7 @@ const Button = ({ formFields})  =>{
   return (
     <div className="App">
       <Pdf targetRef={ref} filename="download.pdf" options={options} scale={1} x={0} y={0}>
-        {({ toPdf }) => <button onClick={toPdf} className="pdt-button">Generate Pdf</button>}
+        {({ toPdf }) => <button onClick={toPdf} className="pdt-button">Submit</button>}
       </Pdf>
       <div ref={ref}>
       <div
@@ -277,7 +277,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          3
+      { ((+a1 + +a2 + +a3 + +a4 + +a5 + +a6) / 6).toFixed(2) }
         </p>
         <p
           style={{
@@ -414,7 +414,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          2.25
+          {((+b1 + +b2 + +b3 + +b4) / 4 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -620,7 +620,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          2.8
+           {((+c1 + +c2 + +c3 + +c4 + +c5 + +c6 + +c7) / 7 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -804,7 +804,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          3.2
+          {((+d1 + +d2 + +d3 + +d4 + +d5 + +d6 ) / 6 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -1035,7 +1035,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          2.75
+ {((+e1 + +e2 + +e3 + +e4 + +e5 + +e6 + +e7 + +e8 ) / 8 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -1195,7 +1195,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          3.6
+    {((+f1 + +f2 + +f3 + +f4 + +f5 ) / 5 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -1402,7 +1402,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft15"
         >
-          2.8
+       {((+g1 + +g2 + +g3 + +g4 + +g5 + +g6 + +g7 ) / 7 ).toFixed(2)}
         </p>
         <p
           style={{
@@ -1436,7 +1436,7 @@ const Button = ({ formFields})  =>{
           }}
           className="ft12"
         >
-          ?
+                {((((+a1 + +a2 + +a3 + +a4 + +a5 + +a6) / 6) * 0.1) + (((+b1 + +b2 + +b3 + +b4) / 4) * 0.1) + (((+c1 + +c2 + +c3 + +c4 + +c5 + +c6 + +c7) / 7) * 0.2) + (((+d1 + +d2 + +d3 + +d4 + +d5 + +d6) / 6) * 1.75)+ (((+e1 + +e2 + +e3 + +e4 + +e5 + +e6 + +e7 + +e8) / 8) * 0.15) + (((+f1 + +f2 + +f3 + +f4 + +f5) / 5) * 0.15) + (((+g1 + +g2 + +g3 + +g4 + +g5 + +g6 + +g7) / 7) * 0.125)).toFixed(2)}
         </p>
         <p
           style={{
