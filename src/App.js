@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import PDFFile from "./components/pdf";
 // import { PDFDownloadLink } from "@react-pdf/renderer";
-import Pdf from "./components/Pdf";
+import File from "./components/File";
 
 const defaultFormFields = {
   a1: 0,
@@ -1738,9 +1738,7 @@ const App = () => {
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
       </PDFDownloadLink> 
        <PDFFile /> */}
-
-
-       <Pdf/>
+       <File/>
     </div>
   );
 };
