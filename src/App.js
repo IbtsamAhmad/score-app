@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // import PDFFile from "./components/pdf";
 // import { PDFDownloadLink } from "@react-pdf/renderer";
 import File from "./components/File/index";
+import ConvertKit from "./components/ConvertKit"
+import Boot from "./components/Boot"
 
 const defaultFormFields = {
   a1: 0,
@@ -61,8 +63,13 @@ const App = () => {
   console.log("formFields", formFields)
 
   return (
+    <>
+     <h1>This is a Form</h1>
+     {/* <Boot/> */}
+<ConvertKit/>
+
     <div className="app-container">
-      {/* <h1 style={{color:"#00000"}}>Self-Score Your Pitch</h1> */}
+      
       <div
         id="page1-div"
         style={{ position: "relative", 
@@ -1740,6 +1747,7 @@ const App = () => {
        <PDFFile /> */}
        <File formFields={formFields}/>
     </div>
+    </>
   );
 };
 
