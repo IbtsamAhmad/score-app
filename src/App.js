@@ -64,9 +64,11 @@ const App = () => {
 
   return (
     <>
-     <h1>This is a Form</h1>
+
+    <h1 className="heading">Subscribe using Email</h1>
+       <ConvertKit/>
      {/* <Boot/> */}
-<ConvertKit/>
+
 
     <div className="app-container">
       
@@ -1746,6 +1748,7 @@ const App = () => {
       </PDFDownloadLink> 
        <PDFFile /> */}
        <File formFields={formFields}/>
+
     </div>
     </>
   );

@@ -1,13 +1,8 @@
 import React from "react";
 
-
-{
-
-}
 const index = () => {
   return (
-    <div>
-
+    <div className="form-container">
       <form
         action="https://app.convertkit.com/forms/4843495/subscriptions"
         method="post"
@@ -19,39 +14,31 @@ const index = () => {
         min-width="400 500 600 700 800"
       >
         <div data-style="clean">
-          <ul
-           
-            data-element="errors"
-            data-group="alert"
-          ></ul>
           <div
             data-element="fields"
             data-stacked="false"
           
           >
-            <div>
               <input
+              className="form-input"
                 name="email_address"
                 aria-label="Email Address"
                 placeholder="Email Address"
                 required=""
                 type="email"
                 />
-            </div>
+                <div>
+                </div>
+  
+    
             <button
               data-element="submit"
-           
-            
+              className="submit-btn"
             >
-              <div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
               <span>Subscribe</span>
             </button>
           </div>
-          <div>
+          {/* <div>
             <a href="https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by"
               data-variant="dark"
             //   target="_blank"
@@ -59,7 +46,7 @@ const index = () => {
             >
               Built with ConvertKit
             </a>
-          </div>
+          </div> */}
         </div>
       </form>
     </div>
