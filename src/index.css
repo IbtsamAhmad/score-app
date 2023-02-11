@@ -24,62 +24,62 @@ p {
 
 .ft10 {
     font-size: 37px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #017100;
 }
 
 .ft11 {
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #017100;
 }
 
 .ft12 {
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft13 {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft14 {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
     font-weight: 500;
 }
 
 .ft15 {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft16 {
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft17 {
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft18 {
     font-size: 17px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
 .ft19 {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
 }
 
@@ -90,7 +90,7 @@ p {
     height: 20px;
     width: 151px;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     color: #000000;
     font-weight: bold;
     text-align: center;
@@ -98,6 +98,11 @@ p {
 .my-input:active{
     border: none;
     outline:none;
+}
+
+b{
+    font-family: sans-serif !important;
+    font-weight: 600 !important;
 }
 
 .pdt-button{
@@ -115,7 +120,9 @@ p {
     font-size: 17px;
     font-weight: bold;
 }
-
+h1{
+    font-family:sans-serif;
+}
 .heading{
     text-align: center;
 }
