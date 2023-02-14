@@ -503,7 +503,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your six scores)
           </p>
           <p
             style={{
@@ -659,7 +659,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your four scores)
           </p>
           <p
             style={{
@@ -897,7 +897,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your seven scores)
           </p>
           <p
             style={{
@@ -1110,7 +1110,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your six scores)
           </p>
           <p
             style={{
@@ -1564,7 +1564,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your five scores)
           </p>
           <p
             style={{
@@ -1805,7 +1805,7 @@ const App = () => {
             className="ft13"
           >
             <b>SUB TOTAL </b>
-            (based on an average of your eight scores)
+            (based on an average of your seven scores)
           </p>
           <p
             style={{
