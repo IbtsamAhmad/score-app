@@ -58,7 +58,7 @@ const defaultFormFields = {
 
 const App = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [buffer, setBuffer] = useState("");
   const [email, setEmail] = useState("");
 
@@ -116,6 +116,10 @@ const App = () => {
     setFormFields({ ...formFields, [name]: value });
   };
   console.log("formFields", formFields);
+  console.log("email", email);
+   
+ 
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -183,49 +187,57 @@ const App = () => {
   const emailHandler = (e) => {
     setEmail(e.target.value);
   };
+
+
+  const mySubmit = async (e) =>{
+    console.log("hererererer")
+  e.preventDefault();
+    try {
+      const downloadResponse = await axios.post(
+        "https://app.convertkit.com/forms/4843495/subscriptions",
+        {
+          email_address: email,
+          
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (downloadResponse) {
+        console.log("downloadResponse", downloadResponse);
+        setShow(false)
+      }
+    } catch (error) {
+      console.log("errrr", error);
+      setShow(false)
+    }
+  }
+ 
+
   return (
     <>
       {/* <Boot/> */}
-
       <div className="app-container">
+      <h1>Being Investable App</h1>
         <div className="model-container">
           <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
+            <Modal.Header>
               <Modal.Title>Subscribe</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <ConvertKit />
+              <ConvertKit setEmail={setEmail}/>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              {/* <Button variant="secondary" onClick={handleClose}>
                 Close
-              </Button>
+              </Button> */}
               {/* <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button> */}
             </Modal.Footer>
           </Modal>
-
-          <Form onSubmit={handleSubmit} style={{marginTop:"20px"}} className="form-container">
-            <h1>Upload Pdf Form</h1>
-
-            <input
-              type="email"
-              placeholder="Enter Email"
-              onChange={emailHandler}
-              className="form-input"
-            />
-            <input
-              type="file"
-              onChange={fileHandler}
-              placeholder="UploadFile"
-              accept=".pdf"
-              style={{marginTop:"20px"}}
-            />
-            <Button variant="primary" type="submit"  style={{marginTop:"20px"}}>
-              Submit
-            </Button>
-          </Form>
         </div>
         <div
           id="page1-div"
@@ -1948,6 +1960,27 @@ const App = () => {
             Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
           </p>
         </div>
+
+        <Form onSubmit={handleSubmit} style={{marginTop:"20px"}} className="form-container">
+
+            <input
+              value={email}
+              type="email"
+              placeholder="Enter Email"
+              onChange={emailHandler}
+              className="form-input"
+            />
+            <input
+              type="file"
+              onChange={fileHandler}
+              placeholder="UploadFile"
+              accept=".pdf"
+              style={{marginTop:"20px"}}
+            />
+            <Button variant="primary" type="submit"  style={{marginTop:"20px"}}>
+              Submit
+            </Button>
+          </Form>
 
         {/* <PDFDownloadLink document={<PDFFile />} filename="FORM">
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}

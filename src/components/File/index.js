@@ -15,7 +15,7 @@ const Button = ({ formFields})  =>{
   return (
     <div className="App">
       <Pdf targetRef={ref} filename="download.pdf" options={options} scale={1} x={0} y={0}>
-        {({ toPdf }) => <button onClick={toPdf} className="pdt-button">Submit</button>}
+        {({ toPdf }) => <button onClick={toPdf} className="pdf-button">Submit</button>}
       </Pdf>
       <div ref={ref}>
       <div

@@ -1,6 +1,10 @@
 import React from "react";
 
-const index = () => {
+const index = ({ setEmail }) => {
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
     <div className="form-container">
       <form
@@ -14,28 +18,20 @@ const index = () => {
         min-width="400 500 600 700 800"
       >
         <div data-style="clean">
-          <div
-            data-element="fields"
-            data-stacked="false"
-          
-          >
-              <input
+          <div data-element="fields" data-stacked="false">
+            <input
+              required
+              onChange={emailHandler}
               className="form-input"
-                name="email_address"
-                aria-label="Email Address"
-                placeholder="Email Address"
-                required=""
-                type="email"
-                />
-                <div>
-                </div>
-  
-    
-            <button
-              data-element="submit"
-              className="submit-btn"
-            >
-              <span>Subscribe</span>
+              name="email_address"
+              aria-label="Email Address"
+              placeholder="Email Address"
+              type="email"
+            />
+            <div></div>
+
+            <button data-element="submit" className="submit-btn">
+              <span>Proceed</span>
             </button>
           </div>
           {/* <div>
