@@ -3,10 +3,11 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
+
 }
 .app-container{
     /* background: red; */
-    height: 2636px;
+    height: 3382px;
     overflow: hidden;
     /* display: flex;
     align-items: center;
@@ -106,7 +107,7 @@ b{
 }
 
 .pdf-button{
-    top: 2550px;
+    top: 2460px;
     padding: 10px;
     z-index: 10;
     border: none;
@@ -116,12 +117,15 @@ b{
     position: absolute;
     background: blueviolet;
     color: #ffff;
-    width: 150px;
+    width: 160px;
     font-size: 17px;
     font-weight: bold;
 }
 h1{
-    font-family:sans-serif;
+    font-family:sans-serif !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    font-weight: 700 !important;
 }
 .heading{
     text-align: center;
@@ -141,6 +145,7 @@ h1{
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
     border-radius: 6px;
+    margin: 20px 0;
 }
 .submit-btn{
     font-family: sans-serif;
@@ -164,4 +169,30 @@ outline: none;
 }
 
 
+.pdfForm-container{
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    max-width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: block;
+    margin: 0 auto;
+    margin-top: -80px !important;
+    position: relative;
+    z-index: 100;
+}
+
+.form-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    height: 500px;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+.btn-btn{
+    
+}
 

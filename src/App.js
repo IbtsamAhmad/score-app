@@ -8,6 +8,7 @@ import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import ConvertKit from "./components/ConvertKit";
 import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 // import { transporter, mailOptions } from "./config";
 
 const defaultFormFields = {
@@ -58,10 +59,10 @@ const defaultFormFields = {
 
 const App = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [buffer, setBuffer] = useState("");
   const [email, setEmail] = useState("");
-
+  // const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const {
@@ -188,33 +189,6 @@ const App = () => {
     setEmail(e.target.value);
   };
 
-
-  const mySubmit = async (e) =>{
-    console.log("hererererer")
-  e.preventDefault();
-    try {
-      const downloadResponse = await axios.post(
-        "https://app.convertkit.com/forms/4843495/subscriptions",
-        {
-          email_address: email,
-          
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (downloadResponse) {
-        console.log("downloadResponse", downloadResponse);
-        setShow(false)
-      }
-    } catch (error) {
-      console.log("errrr", error);
-      setShow(false)
-    }
-  }
- 
 
   return (
     <>
@@ -1960,9 +1934,14 @@ const App = () => {
             Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
           </p>
         </div>
-
-        <Form onSubmit={handleSubmit} style={{marginTop:"20px"}} className="form-container">
-
+        <Form onSubmit={handleSubmit} style={{marginTop:"20px"}} className="pdfForm-container">
+          <div className="form-content">
+            <h1>Upload Pdf Form</h1>
+          <input
+              type="text"
+              placeholder="Enter Name"
+              className="form-input"
+            />
             <input
               value={email}
               type="email"
@@ -1977,9 +1956,24 @@ const App = () => {
               accept=".pdf"
               style={{marginTop:"20px"}}
             />
-            <Button variant="primary" type="submit"  style={{marginTop:"20px"}}>
-              Submit
-            </Button>
+            <button variant="primary" type="submit" classNme="btn-btn" style={{marginTop:"20px",
+            height: "70px",
+    width: "90%",
+    outline: "none",
+    color: "#fff",
+    border: "none",
+    fontSize: "18px",
+    fontWeight: "500",
+    borderRadius: "5px",
+    background: "linear-gradient(135deg, #71b7e6, #9b59b6)",
+    transition: "all 0.3s ease",
+    }}>
+      Upload Pdf <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+  <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+</svg>
+            </button>
+          </div>
+        
           </Form>
 
         {/* <PDFDownloadLink document={<PDFFile />} filename="FORM">
