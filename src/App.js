@@ -222,6 +222,7 @@ const App = () => {
     setNamed(e.target.value)
   }
 
+  console.log("email in app", email)
 
   return (
     <>
@@ -2019,7 +2020,7 @@ const App = () => {
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
       </PDFDownloadLink> 
        <PDFFile /> */}
-        <File formFields={formFields} />
+        <File formFields={formFields} email={email} />
       </div>
       </Spin>
     </>
