@@ -2,6 +2,7 @@ import React from "react";
 
 const index = ({ setEmail }) => {
   const emailHandler = (e) => {
+    localStorage.setItem("userEmail", `${e.target.value}`);
     setEmail(e.target.value);
   };
 
