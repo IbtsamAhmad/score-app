@@ -61,14 +61,19 @@ const defaultFormFields = {
 };
 
 const App = () => {
-  const userEmail = localStorage.getItem("userEmail");
+ 
+ 
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [show, setShow] = useState(true);
   const [named, setNamed] = useState("");
   const [buffer, setBuffer] = useState("");
-  const [email, setEmail] = useState("");
 
   const [loading, setLoading] = useState("");
+   const userEmail = localStorage.getItem("userEmail");
+  const [email, setEmail] = useState(userEmail);
+
+
+  
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
@@ -129,27 +134,24 @@ const App = () => {
  
   const handleClose = () => {
     console.log("email", email)
-    // if (email === "") {
-    // return toast.info("Enter Email to Subscribe", {
-    //   position: "bottom-right",
-    // });
-    // }
+       if (email === null) {
+         return toast.info("Enter Email to Subscribe", {
+           position: "bottom-right",
+         });
+       }
     setShow(false)
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("nameeee", named)
+    console.log(email, userEmail)
     if (named === '') {
     return  toast.error("Name is required", {
         position: "bottom-right",
       });     
     }
-    if (email === '') {
-      return  toast.error("Email is required", {
-          position: "bottom-right",
-        });     
-      }
+
 
     if (buffer === '') {
       return  toast.error("File is required", {
@@ -161,7 +163,7 @@ const App = () => {
       const downloadResponse = await axios.post(
         "https://bizfund-exceltopdf.herokuapp.com/api/email/sendEmail",
         {
-          to: email,
+          to: userEmail,
           subject: "testing",
           text: "Hey",
           html: "hey",
@@ -179,10 +181,12 @@ const App = () => {
         toast.success("Email Sent", {
           position: "bottom-right",
         });
+         localStorage.removeItem("userEmail");
         setLoading(false)
       }
     } catch (error) {
       console.log("errrr", error);
+       localStorage.removeItem("userEmail");
       setLoading(false)
     }
   };
