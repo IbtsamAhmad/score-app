@@ -3,13 +3,13 @@ import React, { useState } from "react";
 // import { PDFDownloadLink } from "@react-pdf/renderer";
 import File from "./components/File/index";
 import Modal from "./components/Modal";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
+// import Alert from "react-bootstrap/Alert";
 import ConvertKit from "./components/ConvertKit";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import { ColorRing } from  'react-loader-spinner'
+// import { ColorRing } from  'react-loader-spinner'
 import { Spin } from 'antd';
 // import { useNavigate } from "react-router-dom";
 // import { transporter, mailOptions } from "./config";
@@ -70,7 +70,7 @@ const App = () => {
 
   const [loading, setLoading] = useState("");
    const userEmail = localStorage.getItem("userEmail");
-  const [email, setEmail] = useState(userEmail);
+  const [email, setEmail] = useState('');
 
 
   
@@ -134,7 +134,7 @@ const App = () => {
  
   const handleClose = () => {
     console.log("email", email)
-       if (email === null) {
+       if (email === '') {
          return toast.info("Enter Email to Subscribe", {
            position: "bottom-right",
          });
@@ -142,19 +142,9 @@ const App = () => {
     setShow(false)
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("nameeee", named)
-    console.log(email, userEmail)
-    if (named === '') {
-    return  toast.error("Name is required", {
-        position: "bottom-right",
-      });     
-    }
-
-
-    if (buffer === '') {
-      return  toast.error("File is required", {
+  const handleSubmit = async () => {
+    if (email === '') {
+      return  toast.error("Email is required", {
         position: "bottom-right",
       });    
       }
@@ -163,12 +153,13 @@ const App = () => {
       const downloadResponse = await axios.post(
         "https://bizfund-exceltopdf.herokuapp.com/api/email/sendEmail",
         {
-          to: userEmail,
+          // to: userEmail,
+          to: "ibtsamahmad01@gmail.com",
           subject: "testing",
           text: "Hey",
           html: "hey",
           fileName: "file.pdf",
-          bufferContent: buffer,
+          grades: formFields,
         },
         {
           headers: {
@@ -1979,7 +1970,7 @@ const App = () => {
               Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
             </p>
           </div>
-          <Form
+          {/* <Form
             onSubmit={handleSubmit}
             style={{ marginTop: "20px" }}
             className="pdfForm-container"
@@ -2039,13 +2030,17 @@ const App = () => {
                 </svg>
               </button>
             </div>
-          </Form>
+          </Form> */}
 
           {/* <PDFDownloadLink document={<PDFFile />} filename="FORM">
       {({loading}) => (loading ? <button>Loading Document...</button> : <button>Download</button> )}
       </PDFDownloadLink> 
        <PDFFile /> */}
-          <File formFields={formFields} email={email} />
+          <File
+            formFields={formFields}
+            email={email}
+            handleSubmit={handleSubmit}
+          />
         </div>
       </Spin>
     </>

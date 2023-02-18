@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Form, Col, Row, Button } from "react-bootstrap";
 
 const About = (props) => {
+    localStorage.removeItem("userEmail");
     return (
         <>
-        <Container>
+        {/* <Container>
           <h1>This is a form</h1>
           <Row>
             <Col lg={4}>
@@ -51,7 +52,7 @@ const About = (props) => {
               </Form>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </>
 
     )
