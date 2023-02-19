@@ -78,7 +78,9 @@ const Button = ({ formFields, email, handleSubmit }) => {
               //     position: "bottom-right",
               //   });
               // }
-            const data = await handleSubmit()
+            const data = await handleSubmit();
+            console.log("data", data)
+          
               // toPdf();
             }}
             className="pdf-button"
