@@ -154,7 +154,7 @@ const App = () => {
         "https://bizfund-exceltopdf.herokuapp.com/api/email/sendEmail",
         {
           // to: userEmail,
-          to: "ibtsamahmad01@gmail.com",
+          to: email,
           subject: "testing",
           text: "Hey",
           html: "hey",
@@ -173,7 +173,7 @@ const App = () => {
           position: "bottom-right",
         });
               const hiddenElement = document.createElement("a");
-              hiddenElement.setAttribute("target", "_blank");
+              // hiddenElement.setAttribute("target", "_blank");
               hiddenElement.href = downloadResponse.data.fileURL;
               console.log("hiddenElement", hiddenElement);
               hiddenElement.click();
