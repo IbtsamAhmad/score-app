@@ -182,15 +182,19 @@ const App = () => {
         hiddenElement.href = downloadResponse.data.fileURL;
         console.log("hiddenElement", hiddenElement);
         hiddenElement.click();
-        localStorage.removeItem("userEmail");
-        setLoading(false);
-        window.location.reload();
-        setShow(true);
+  
+     
       }
     } catch (error) {
       console.log("errrr", error);
       localStorage.removeItem("userEmail");
       setLoading(false);
+    }
+    finally{
+        localStorage.removeItem("userEmail");
+         setLoading(false);
+         setShow(true);
+      window.location.reload();
     }
   };
 
