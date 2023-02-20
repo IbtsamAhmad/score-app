@@ -55,7 +55,7 @@ const Button = ({ formFields, email, handleSubmit, setEmail }) => {
   const options = {
     // orientation: 'landscape',
     unit: "in",
-    format: [20, 25],
+    format: [15, 25],
   };
   return (
     <div className="App">
@@ -87,9 +87,9 @@ const Button = ({ formFields, email, handleSubmit, setEmail }) => {
                 //     position: "bottom-right",
                 //   });
                 // }
-                toPdf();
-                // const data = await handleSubmit();
-                // console.log("data", data);
+                // toPdf();
+                const data = await handleSubmit();
+                console.log("data", data);
 
                 // toPdf();
               }}
