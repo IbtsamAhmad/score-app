@@ -62,13 +62,18 @@ const defaultFormFields = {
 
 const App = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const [show, setShow] = useState(true);
+ 
   const [named, setNamed] = useState("");
   const [buffer, setBuffer] = useState("");
   const [loading, setLoading] = useState("");
   const userEmail = localStorage.getItem("userEmail");
-  const [email, setEmail] = useState("");
 
+  const [email, setEmail] = useState(userEmail);
+  // 
+   const [show, setShow] = useState(true);
+    const checkSubscribe = email === null ? false : true;
+    const [subscribe, setSubscribe] = useState(checkSubscribe);
+  console.log('email', email)
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
@@ -128,11 +133,17 @@ const App = () => {
 
   const handleClose = () => {
     console.log("email", email);
-    if (email === "") {
+    if (email === "" || email === null) {
       return toast.info("Enter Email to Subscribe", {
         position: "bottom-right",
       });
     }
+     if (!subscribe) {
+       return toast.info("Please Subscribe", {
+         position: "bottom-right",
+       });
+     }
+
     setShow(false);
   };
 
@@ -267,7 +278,7 @@ const App = () => {
                     </svg>
                   </span>
                 </button> */}
-                <ConvertKit setEmail={setEmail} />
+                <ConvertKit setEmail={setEmail} email={email} subscribe={subscribe}/>
               </Modal.Body>
               <Modal.Footer>
                 {/* <Button variant="secondary" onClick={handleClose}>
