@@ -174,14 +174,15 @@ const App = () => {
       );
       if (downloadResponse) {
         console.log("downloadResponse", downloadResponse);
-        toast.success("Email Sent", {
-          position: "bottom-right",
-        });
+
         const hiddenElement = document.createElement("a");
         // hiddenElement.setAttribute("target", "_blank");
         hiddenElement.href = downloadResponse.data.fileURL;
         console.log("hiddenElement", hiddenElement);
         hiddenElement.click();
+                toast.success("Email Sent", {
+                  position: "bottom-right",
+                });
   
      
       }
@@ -194,7 +195,7 @@ const App = () => {
         localStorage.removeItem("userEmail");
          setLoading(false);
          setShow(true);
-      window.location.reload();
+      // window.location.reload();
     }
   };
 
@@ -2004,7 +2005,7 @@ const App = () => {
               }}
               className="ft15"
             >
-              The design and informaJon contained in the Self-Score Your Pitch,
+              The design and information contained in the Self-Score Your Pitch,
               and the name Being Investable remain the property of John C H
               Perry ©2023
             </p>
