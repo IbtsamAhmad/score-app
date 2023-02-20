@@ -195,7 +195,7 @@ const App = () => {
         localStorage.removeItem("userEmail");
          setLoading(false);
          setShow(true);
-      // window.location.reload();
+       window.location.reload();
     }
   };
 
