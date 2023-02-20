@@ -178,20 +178,15 @@ const App = () => {
     toast.success("Email Sent", {
       position: "bottom-right",
     });
-       const link = document.createElement("a");
-       link.href = downloadResponse.data.fileURL;
-       link.setAttribute("download", `FileName.pdf`);
-
-       // Append to html link element page
-       document.body.appendChild(link);
-
-       // Start download
-       link.click();
-      //   const hiddenElement = document.createElement("a");
-      //  hiddenElement.setAttribute("target", "_blank");
-      //   hiddenElement.href = downloadResponse.data.fileURL;
-      //   console.log("hiddenElement", hiddenElement);
-      //   hiddenElement.click();
+        
+             var hiddenElement = document.createElement("a");
+              //  hiddenElement.setAttribute("target", "_blank");
+               hiddenElement.download = "SamplePDF.pdf";
+             hiddenElement.setAttribute("id", " " + Math.random());
+             hiddenElement.href = downloadResponse.data.fileURL;
+             console.log("hiddenElement", hiddenElement);
+             hiddenElement.click();
+           
       }
     } catch (error) {
       console.log("errrr", error);
