@@ -67,13 +67,10 @@ const App = () => {
   const [show, setShow] = useState(true);
   const [named, setNamed] = useState("");
   const [buffer, setBuffer] = useState("");
-
   const [loading, setLoading] = useState("");
    const userEmail = localStorage.getItem("userEmail");
   const [email, setEmail] = useState('');
 
-
-  
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
@@ -139,7 +136,8 @@ const App = () => {
            position: "bottom-right",
          });
        }
-    // setShow(false)
+        setShow(false);
+
   };
 
   const handleSubmit = async () => {
@@ -246,7 +244,7 @@ const App = () => {
                 <Modal.Title>Subscribe</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <input
+                {/* <input
                   required
                   onChange={emailHandler}
                   className="form-input"
@@ -272,8 +270,8 @@ const App = () => {
                       />
                     </svg>
                   </span>
-                </button>
-                {/* <ConvertKit setEmail={setEmail} /> */}
+                </button> */}
+                <ConvertKit setEmail={setEmail} />
               </Modal.Body>
               <Modal.Footer>
                 {/* <Button variant="secondary" onClick={handleClose}>
