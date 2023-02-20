@@ -195,9 +195,10 @@ const App = () => {
         localStorage.removeItem("userEmail");
          setLoading(false);
          setShow(true);
-    setTimeout(() => {
-     window.location.reload();
-    }, 1500);
+         setEmail('');
+    // setTimeout(() => {
+    //  window.location.reload();
+    // }, 1500);
     }
   };
 
