@@ -73,7 +73,7 @@ const App = () => {
    const [show, setShow] = useState(showModel);
     const checkSubscribe = email === null ? false : true;
     const [subscribe, setSubscribe] = useState(checkSubscribe);
-    console.log('email', email)
+    console.log('emailllllll', email)
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
@@ -138,6 +138,7 @@ const App = () => {
         position: "bottom-right",
       });
     }
+    console.log("subscribe", subscribe)
      if (!subscribe) {
        return toast.info("Please Subscribe", {
          position: "bottom-right",
