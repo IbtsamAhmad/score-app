@@ -76,6 +76,7 @@ const Button = ({ formFields, email, handleSubmit , setEmail}) => {
           <button className="my-button" onClick={() =>{
                  localStorage.removeItem("userEmail");
                 setEmail("");
+                window.location.reload();
           }}>Change Email</button>
             <button
               onClick={async () => {
