@@ -61,7 +61,7 @@ const Button = ({ formFields, email, handleSubmit, setEmail }) => {
     <div className="App">
       <Pdf
         targetRef={ref}
-        filename="download.pdf"
+        filename={`${email}.pdf`}
         options={options}
         scale={1}
         x={0}
