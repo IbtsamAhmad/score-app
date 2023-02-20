@@ -7,7 +7,7 @@ body {
 }
 .app-container{
     /* background: red; */
-    height: 2600px;
+    height: 2700px;
     overflow: hidden;
     /* display: flex;
     align-items: center;
@@ -107,21 +107,7 @@ b{
     font-weight: 600 !important;
 }
 
-.pdf-button{
-    top: 2460px;
-    padding: 10px;
-    z-index: 10;
-    border: none;
-    border-radius: 4px;
-    left: 45%;
-    outline: none;
-    position: absolute;
-    background: linear-gradient(135deg, #20BF55, #01BAEF);
-    color: #ffff;
-    width: 160px;
-    font-size: 17px;
-    font-weight: bold;
-}
+
 h1{
     font-family:sans-serif !important;
     text-align: center !important;
@@ -200,3 +186,52 @@ outline: none;
     
 }
 
+
+.my-p{
+top: 2460px;
+    /* padding: 10px; */
+    z-index: 10;
+    border: none;
+    border-radius: 4px;
+    left: 25%;
+    outline: none;
+    position: absolute;
+    /* background: linear-gradient(135deg, #20BF55, #01BAEF);
+    color: #ffff; */
+    /* width: 160px; */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.my-button{
+top: 2500px;
+    padding: 10px;
+    z-index: 10;
+    border: none;
+    border-radius: 4px;
+    left: 25%;
+    outline: none;
+    position: absolute;
+    background: linear-gradient(15deg, #20BF55, #01BAEF);
+    color: #ffff;
+    width: 160px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.pdf-button {
+    top: 2560px;
+    padding: 10px;
+    z-index: 10;
+    border: none;
+    border-radius: 4px;
+    left: 25%;
+    outline: none;
+    position: absolute;
+    background: linear-gradient(135deg, #20BF55, #01BAEF);
+    color: #ffff;
+    width: 160px;
+    font-size: 17px;
+    font-weight: bold;
+}

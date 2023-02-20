@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = ({ setEmail, email, subscribe }) => {
+const index = ({ setEmail, email }) => {
   const emailHandler = (e) => {
     localStorage.setItem("userEmail", `${e.target.value}`);
     setEmail(e.target.value);
@@ -30,7 +30,9 @@ const index = ({ setEmail, email, subscribe }) => {
               placeholder="Email Address"
               type="email"
             />
-            <div></div>
+            <div>
+             
+            </div>
 
             <button data-element="submit" className="submit-btn">
               <span>
@@ -62,12 +64,6 @@ const index = ({ setEmail, email, subscribe }) => {
           </div> */}
         </div>
       </form>
-      <p>The email will be sent to : {email}</p>
-      <p>
-        {subscribe
-          ? "Click on the model to Close and proceed"
-          : "Subscription is Required"}
-      </p>
     </div>
   );
 };

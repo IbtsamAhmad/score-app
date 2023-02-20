@@ -199,50 +199,52 @@ const App = () => {
     }
   };
 
-  function file2Buffer(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
+  // function file2Buffer(file) {
+  //   return new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
 
-      reader.onload = (event) => {
-        resolve(event.target.result);
-      };
+  //     reader.onload = (event) => {
+  //       resolve(event.target.result);
+  //     };
 
-      reader.onerror = (err) => {
-        reject(err);
-      };
+  //     reader.onerror = (err) => {
+  //       reject(err);
+  //     };
 
-      reader.readAsDataURL(file);
-    });
-  }
+  //     reader.readAsDataURL(file);
+  //   });
+  // }
 
-  const fileHandler = async (e) => {
-    console.log("info", e.target.files[0]);
-    if (e.target.files[0].type !== "application/pdf") {
-      return alert("Please Upload a pdf File");
-    }
-    const fileBuffer = await file2Buffer(e.target.files[0]);
-    console.log("fileBuffer", fileBuffer);
-    const splitted = fileBuffer.split(",")[1];
-    setBuffer(splitted);
-  };
+  // const fileHandler = async (e) => {
+  //   console.log("info", e.target.files[0]);
+  //   if (e.target.files[0].type !== "application/pdf") {
+  //     return alert("Please Upload a pdf File");
+  //   }
+  //   const fileBuffer = await file2Buffer(e.target.files[0]);
+  //   console.log("fileBuffer", fileBuffer);
+  //   const splitted = fileBuffer.split(",")[1];
+  //   setBuffer(splitted);
+  // };
 
-  const emailHandler = (e) => {
-    setEmail(e.target.value);
-  };
+  // const emailHandler = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const nameHandler = (e) => {
-    console.log(e.target.value);
-    setNamed(e.target.value);
-  };
-  const proceedHandler = () => {
-    if (email === "") {
-      return toast.error("Email is required", {
-        position: "bottom-right",
-      });
-    }
-    setShow(false);
-  };
+  // const nameHandler = (e) => {
+  //   console.log(e.target.value);
+  //   setNamed(e.target.value);
+  // };
+  // const proceedHandler = () => {
+  //   if (email === "") {
+  //     return toast.error("Email is required", {
+  //       position: "bottom-right",
+  //     });
+  //   }
+  //   setShow(false);
+  // };
 
+
+ 
   console.log("email in app", email);
 
   return (
@@ -284,7 +286,11 @@ const App = () => {
                     </svg>
                   </span>
                 </button> */}
-                <ConvertKit setEmail={setEmail} email={email} subscribe={subscribe}/>
+                <ConvertKit
+                  setEmail={setEmail}
+                  email={email}
+                  subscribe={subscribe}
+                />
               </Modal.Body>
               <Modal.Footer>
                 {/* <Button variant="secondary" onClick={handleClose}>
@@ -2092,6 +2098,7 @@ const App = () => {
             formFields={formFields}
             email={email}
             handleSubmit={handleSubmit}
+            setEmail={setEmail}
           />
         </div>
       </Spin>
