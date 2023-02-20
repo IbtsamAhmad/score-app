@@ -184,6 +184,7 @@ const App = () => {
         hiddenElement.click();
         localStorage.removeItem("userEmail");
         setLoading(false);
+        window.location.reload();
         setShow(true);
       }
     } catch (error) {
