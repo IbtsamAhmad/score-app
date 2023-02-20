@@ -67,13 +67,13 @@ const App = () => {
   const [buffer, setBuffer] = useState("");
   const [loading, setLoading] = useState("");
   const userEmail = localStorage.getItem("userEmail");
-
+   const showModel = userEmail === null ? true : false;
   const [email, setEmail] = useState(userEmail);
   // 
-   const [show, setShow] = useState(true);
+   const [show, setShow] = useState(showModel);
     const checkSubscribe = email === null ? false : true;
     const [subscribe, setSubscribe] = useState(checkSubscribe);
-  console.log('email', email)
+    console.log('email', email)
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
