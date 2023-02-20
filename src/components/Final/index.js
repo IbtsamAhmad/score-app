@@ -179,13 +179,13 @@ const App = () => {
       position: "bottom-right",
     });
         
-             var hiddenElement = document.createElement("a");
-              //  hiddenElement.setAttribute("target", "_blank");
-               hiddenElement.download = "SamplePDF.pdf";
-             hiddenElement.setAttribute("id", " " + Math.random());
-             hiddenElement.href = downloadResponse.data.fileURL;
-             console.log("hiddenElement", hiddenElement);
-             hiddenElement.click();
+            //  var hiddenElement = document.createElement("a");
+            //  hiddenElement.setAttribute("target", "_blank");
+            //    hiddenElement.download = "SamplePDF.pdf";
+            //  hiddenElement.setAttribute("id", " " + Math.random());
+            //  hiddenElement.href = downloadResponse.data.fileURL;
+            //  console.log("hiddenElement", hiddenElement);
+            //  hiddenElement.click();
            
       }
     } catch (error) {

@@ -6,41 +6,20 @@ const index = ({ setEmail, email }) => {
     localStorage.setItem("userEmail", `${e.target.value}`);
     setEmail(e.target.value);
   };
-  const onSubmit = async () =>{
-    console.log("in submittttt")
-     const submitResponse = await axios.post(
-       "https://app.convertkit.com/forms/4874872/subscriptions",
-       {
-      email_address: "ibtsamahmad01@gmail.com",
-token: "",
-referrer: "https://silly-dolphin-1c8f2f.netlify.app/",
-user: "c1f71bd7-ac8c-4f89-8267-0e7ca5447652"
-       },
-       {
-         headers: {
-           "Content-Type": "application/json",
-         },
-       }
-     );
-     if (submitResponse) {
-       console.log("submitResponse", submitResponse);
-     }
-      
-  }
+ 
 
   return (
     <div className="form-container">
       <form
-       // action="https://app.convertkit.com/forms/4874872/subscriptions"
-       // method="post"
-       // data-sv-form="4874872"
-        // data-sv-form="4843495"
-        //data-uid="ce78bcb582"
+       action="https://app.convertkit.com/forms/4874872/subscriptions"
+       method="post"
+       data-sv-form="4874872"
+        data-uid="ce78bcb582"
         data-format="inline"
         data-version="5"
         data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Please reload the page to proceed.","redirect_url":"https://silly-dolphin-1c8f2f.netlify.app/"},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
         min-width="400 500 600 700 800"
-        onSubmit={onSubmit}
+       
       >
         <div data-style="clean">
           <div data-element="fields" data-stacked="false">
