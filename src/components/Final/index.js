@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { Spin } from "antd";
 // import { useNavigate } from "react-router-dom";
 // import { transporter, mailOptions } from "./config";
+import { saveAs } from "file-saver";
 
 const defaultFormFields = {
   a1: 0,
@@ -148,6 +149,28 @@ const App = () => {
     setShow(false);
   };
 
+  const downloadPDF = (url) => {
+    const pdfUrl = url; // Replace with your PDF URL
+
+    fetch(pdfUrl, {
+      headers: {
+        "Content-Type": "application/pdf",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.blob();
+      })
+      .then((blob) => {
+        saveAs(blob, `${email}.pdf`);
+      })
+      .catch((error) => {
+        console.error("Error while downloading the PDF file:", error);
+      });
+  };
+
   const handleSubmit = async () => {
     if (email === "") {
       return toast.error("Email is required", {
@@ -178,26 +201,54 @@ const App = () => {
     toast.success("Email Sent", {
       position: "bottom-right",
     });
+   
+    // fetch(downloadResponse.data.fileURL).then((response) => response.blob()).then((blob) =>{
+    //   const blobUrl = window.URL.createObjectURL(new Blob([blob]))
+    //       // const pdfUrl = downloadResponse.data.fileURL; 
+    //       const link = document.createElement("a");
+    //       link.href = blobUrl;
+    //       link.download = "my-file.pdf";
+    //       document.body.appendChild(link);
+    //       link.click();
+    // })
+
+
+
+
+    downloadPDF(downloadResponse.data.fileURL);
         
-             var hiddenElement = document.createElement("a");
-             hiddenElement.setAttribute("target", "_blank");
-               hiddenElement.download = "SamplePDF.pdf";
-             hiddenElement.setAttribute("id", " " + Math.random());
-             hiddenElement.href = downloadResponse.data.fileURL;
-             console.log("hiddenElement", hiddenElement);
-             hiddenElement.click();
+      // await axios({
+      //   url: downloadResponse.data.fileURL,
+      //   method: "GET",
+      //   responseType: "blob",
+      // }).then((response) => {
+      //   console.log(response);
+      //   const url = window.URL.createObjectURL(new Blob([response.data]));
+      //   const link = document.createElement("a");
+      //   link.href = url;
+      //   link.setAttribute("download", "file.pdf");
+      //   document.body.appendChild(link);
+      //   link.click();
+      // });
+            //  var hiddenElement = document.createElement("a");
+            //  hiddenElement.setAttribute("target", "_blank");
+            //    hiddenElement.download = "SamplePDF.pdf";
+            //  hiddenElement.setAttribute("id", " " + Math.random());
+            //  hiddenElement.href = downloadResponse.data.fileURL;
+            //  console.log("hiddenElement", hiddenElement);
+            //  hiddenElement.click();
            
       }
     } catch (error) {
       console.log("errrr", error);
-      localStorage.removeItem("userEmail");
+      // localStorage.removeItem("userEmail");
       setLoading(false);
     }
     finally{
-        localStorage.removeItem("userEmail");
+        // localStorage.removeItem("userEmail");
          setLoading(false);
-         setShow(true);
-         setEmail('');
+        //  setShow(true);
+        //  setEmail('');
     // setTimeout(() => {
     //  window.location.reload();
     // }, 1500);
