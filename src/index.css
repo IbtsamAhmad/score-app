@@ -188,12 +188,12 @@ outline: none;
 
 
 .my-p{
-top: 2460px;
+top: 2470px;
     /* padding: 10px; */
     z-index: 10;
     border: none;
     border-radius: 4px;
-    left: 25%;
+    left: 10%;
     outline: none;
     position: absolute;
     /* background: linear-gradient(135deg, #20BF55, #01BAEF);
@@ -204,12 +204,12 @@ top: 2460px;
 }
 
 .my-button{
-top: 2500px;
+top: 2460px;
     padding: 10px;
     z-index: 10;
     border: none;
     border-radius: 4px;
-    left: 25%;
+    left: 35%;
     outline: none;
     position: absolute;
     background: linear-gradient(15deg, #20BF55, #01BAEF);
@@ -221,12 +221,12 @@ top: 2500px;
 
 
 .pdf-button {
-    top: 2560px;
+top: 2460px;
     padding: 10px;
     z-index: 10;
     border: none;
     border-radius: 4px;
-    left: 25%;
+    left: 50%;
     outline: none;
     position: absolute;
     background: linear-gradient(135deg, #20BF55, #01BAEF);
