@@ -308,7 +308,7 @@ const App = () => {
       <ToastContainer />
       <Spin spinning={loading}>
         <div className="app-container">
-          <h1>Being Investable App</h1>
+          {/* <h1>Being Investable App</h1> */}
           <div className="model-container">
             <Modal show={show} onHide={handleClose}>
               <Modal.Header>
@@ -364,7 +364,7 @@ const App = () => {
               position: "relative",
               // width: "1838px",
               // height: "2601px" ,
-              //  marginTop:"-100px",
+              marginTop:"-60px",
               // marginLeft:"130px"
             }}
           >

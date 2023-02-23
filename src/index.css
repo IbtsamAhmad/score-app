@@ -188,7 +188,7 @@ outline: none;
 
 
 .my-p{
-top: 2470px;
+top: 2310px;
     /* padding: 10px; */
     z-index: 10;
     border: none;
@@ -204,7 +204,7 @@ top: 2470px;
 }
 
 .my-button{
-   top: 2460px;
+   top: 2300px;
     padding: 10px;
     z-index: 10;
     border: none;
@@ -221,7 +221,7 @@ top: 2470px;
 
 
 .pdf-button {
-top: 2460px;
+top: 2300px;
     padding: 10px;
     z-index: 10;
     border: none;
