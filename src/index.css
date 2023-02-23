@@ -235,3 +235,22 @@ top: 2300px;
     font-size: 17px;
     font-weight: bold;
 }
+
+
+@media screen and (min-width: 1601px) {
+  .page1-div{
+    margin-left: 7%;
+  }
+  .pdf-button {
+
+  }
+  .my-p {
+    margin-left: 8%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    .page1-div {
+        margin-left: 0%;
+    }
+}

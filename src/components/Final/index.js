@@ -359,6 +359,7 @@ const App = () => {
             </Modal>
           </div>
           <div
+          className="page1-div"
             id="page1-div"
             style={{
               position: "relative",
