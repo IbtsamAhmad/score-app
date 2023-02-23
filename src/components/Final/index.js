@@ -312,7 +312,7 @@ const App = () => {
           <div className="model-container">
             <Modal show={show} onHide={handleClose}>
               <Modal.Header>
-                <Modal.Title>Subscribe</Modal.Title>
+                <Modal.Title>Get your score</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 {/* <input
@@ -364,7 +364,7 @@ const App = () => {
               position: "relative",
               // width: "1838px",
               // height: "2601px" ,
-              marginTop:"-60px",
+              marginTop: "-60px",
               // marginLeft:"130px"
             }}
           >
