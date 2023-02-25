@@ -126,15 +126,20 @@ const App = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (value > 5) {
-      toast.info("Score cannot be greater than 5", {
-        position: "bottom-right",
-      });
-      setFormFields({ ...formFields, [name]: 0 });
-      return;
+    console.log(value)
+      if (value > 5) {
+        toast.info("Score cannot be greater than 5", {
+          position: "bottom-right",
+        });
+        setFormFields((prev) => prev);
+        return;
+      }
+    if (value.length === 2) {
+           
     }
+  
 
-    setFormFields({ ...formFields, [name]: value });
+    setFormFields({ ...formFields, [name]: value.length === 2 ? value.split('')[1] : value });
   };
   console.log("formFields", formFields);
   console.log("email", email);
