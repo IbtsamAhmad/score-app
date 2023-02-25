@@ -257,6 +257,19 @@ top: 2300px;
 
 
 @media screen and (max-width: 500px) {
+    form{
+        width: 100%;
+        
+    }
+    .form-input{
+   width: 90%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+    }
+        .submit-btn {
+            width: 120px;
+        }
 .app-container {
         height: 2700px;
         overflow: scroll;
