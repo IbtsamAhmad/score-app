@@ -63,18 +63,18 @@ const defaultFormFields = {
 
 const App = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
- 
+
   const [named, setNamed] = useState("");
   const [buffer, setBuffer] = useState("");
   const [loading, setLoading] = useState("");
   const userEmail = localStorage.getItem("userEmail");
-   const showModel = userEmail === null ? true : false;
+  const showModel = userEmail === null ? true : false;
   const [email, setEmail] = useState(userEmail);
-  // 
-   const [show, setShow] = useState(showModel);
-    const checkSubscribe = email === null ? false : true;
-    const [subscribe, setSubscribe] = useState(checkSubscribe);
-    console.log('emailllllll', email)
+  //
+  const [show, setShow] = useState(showModel);
+  const checkSubscribe = email === null ? false : true;
+  const [subscribe, setSubscribe] = useState(checkSubscribe);
+  console.log("emailllllll", email);
   // const navigate = useNavigate();
 
   const handleShow = () => setShow(true);
@@ -126,6 +126,13 @@ const App = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    if (value > 5) {
+      toast.info("Score cannot be greater than 5", {
+        position: "bottom-right",
+      });
+      setFormFields({ ...formFields, [name]: 0 });
+      return;
+    }
 
     setFormFields({ ...formFields, [name]: value });
   };
@@ -139,12 +146,12 @@ const App = () => {
         position: "bottom-right",
       });
     }
-    console.log("subscribe", subscribe)
-     if (!subscribe) {
-       return toast.info("Please Subscribe", {
-         position: "bottom-right",
-       });
-     }
+    console.log("subscribe", subscribe);
+    if (!subscribe) {
+      return toast.info("Please Subscribe", {
+        position: "bottom-right",
+      });
+    }
 
     setShow(false);
   };
@@ -198,60 +205,55 @@ const App = () => {
       );
       if (downloadResponse) {
         console.log("downloadResponse", downloadResponse);
-    toast.success("Email Sent", {
-      position: "bottom-right",
-    });
-   
-    // fetch(downloadResponse.data.fileURL).then((response) => response.blob()).then((blob) =>{
-    //   const blobUrl = window.URL.createObjectURL(new Blob([blob]))
-    //       // const pdfUrl = downloadResponse.data.fileURL; 
-    //       const link = document.createElement("a");
-    //       link.href = blobUrl;
-    //       link.download = "my-file.pdf";
-    //       document.body.appendChild(link);
-    //       link.click();
-    // })
+        toast.success("Email Sent", {
+          position: "bottom-right",
+        });
 
+        // fetch(downloadResponse.data.fileURL).then((response) => response.blob()).then((blob) =>{
+        //   const blobUrl = window.URL.createObjectURL(new Blob([blob]))
+        //       // const pdfUrl = downloadResponse.data.fileURL;
+        //       const link = document.createElement("a");
+        //       link.href = blobUrl;
+        //       link.download = "my-file.pdf";
+        //       document.body.appendChild(link);
+        //       link.click();
+        // })
 
+        downloadPDF(downloadResponse.data.fileURL);
 
-
-    downloadPDF(downloadResponse.data.fileURL);
-        
-      // await axios({
-      //   url: downloadResponse.data.fileURL,
-      //   method: "GET",
-      //   responseType: "blob",
-      // }).then((response) => {
-      //   console.log(response);
-      //   const url = window.URL.createObjectURL(new Blob([response.data]));
-      //   const link = document.createElement("a");
-      //   link.href = url;
-      //   link.setAttribute("download", "file.pdf");
-      //   document.body.appendChild(link);
-      //   link.click();
-      // });
-            //  var hiddenElement = document.createElement("a");
-            //  hiddenElement.setAttribute("target", "_blank");
-            //    hiddenElement.download = "SamplePDF.pdf";
-            //  hiddenElement.setAttribute("id", " " + Math.random());
-            //  hiddenElement.href = downloadResponse.data.fileURL;
-            //  console.log("hiddenElement", hiddenElement);
-            //  hiddenElement.click();
-           
+        // await axios({
+        //   url: downloadResponse.data.fileURL,
+        //   method: "GET",
+        //   responseType: "blob",
+        // }).then((response) => {
+        //   console.log(response);
+        //   const url = window.URL.createObjectURL(new Blob([response.data]));
+        //   const link = document.createElement("a");
+        //   link.href = url;
+        //   link.setAttribute("download", "file.pdf");
+        //   document.body.appendChild(link);
+        //   link.click();
+        // });
+        //  var hiddenElement = document.createElement("a");
+        //  hiddenElement.setAttribute("target", "_blank");
+        //    hiddenElement.download = "SamplePDF.pdf";
+        //  hiddenElement.setAttribute("id", " " + Math.random());
+        //  hiddenElement.href = downloadResponse.data.fileURL;
+        //  console.log("hiddenElement", hiddenElement);
+        //  hiddenElement.click();
       }
     } catch (error) {
       console.log("errrr", error);
       // localStorage.removeItem("userEmail");
       setLoading(false);
-    }
-    finally{
-        // localStorage.removeItem("userEmail");
-         setLoading(false);
-        //  setShow(true);
-        //  setEmail('');
-    // setTimeout(() => {
-    //  window.location.reload();
-    // }, 1500);
+    } finally {
+      // localStorage.removeItem("userEmail");
+      setLoading(false);
+      //  setShow(true);
+      //  setEmail('');
+      // setTimeout(() => {
+      //  window.location.reload();
+      // }, 1500);
     }
   };
 
@@ -299,8 +301,6 @@ const App = () => {
   //   setShow(false);
   // };
 
-
- 
   console.log("email in app", email);
 
   return (

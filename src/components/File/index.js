@@ -114,7 +114,7 @@ const Button = ({ formFields, email, handleSubmit, setEmail }) => {
           </div>
         )}
       </Pdf>
-      <div ref={ref}>
+      {/* <div ref={ref}>
         <div
           id="page1-div"
           style={{
@@ -1617,7 +1617,7 @@ const Button = ({ formFields, email, handleSubmit, setEmail }) => {
             Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

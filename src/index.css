@@ -254,3 +254,26 @@ top: 2300px;
         margin-left: 0%;
     }
 }
+
+
+@media screen and (max-width: 500px) {
+.app-container {
+        height: 2700px;
+        overflow: scroll;
+
+    }
+    .page1-div {
+        margin-left: -25%;
+    }
+      .my-button{
+            top: 2390px;
+      }
+    .pdf-button {
+            left: 39%;
+            top: 2480px;
+    }
+
+    .my-p {
+        margin-left: 0%;
+    }
+}
