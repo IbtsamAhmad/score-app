@@ -2073,7 +2073,7 @@ const App = () => {
               }}
               className="ft15"
             >
-              The design and information contained in the Self-Score Your Pitch,
+              The design and information contained in the Self-Score Your Reward Pitch,
               and the name Being Investable remain the property of John C H
               Perry ©2023
             </p>
@@ -2086,7 +2086,7 @@ const App = () => {
               }}
               className="ft15"
             >
-              Mail: Increasing Returns Suite 760, 585 LiZle Collins Street,
+              Mail: Increasing Returns Suite 760, 585 Little Collins Street,
               Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com
             </p>
           </div>
