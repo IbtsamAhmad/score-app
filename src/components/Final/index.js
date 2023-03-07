@@ -674,7 +674,7 @@ const App = () => {
                 left: "1285px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>10%</b>
             </p>
@@ -831,7 +831,7 @@ const App = () => {
                 left: "1285px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>10%</b>
             </p>
@@ -1070,7 +1070,7 @@ const App = () => {
                 left: "1285px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>20%</b>
             </p>
@@ -1283,7 +1283,7 @@ const App = () => {
                 left: "1279px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>17.5%</b>
             </p>
@@ -1553,7 +1553,7 @@ const App = () => {
                 left: "1285px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>15%</b>
             </p>
@@ -1739,7 +1739,7 @@ const App = () => {
                 left: "1285px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>15%</b>
             </p>
@@ -1981,7 +1981,7 @@ const App = () => {
                 left: "1279px",
                 whiteSpace: "nowrap",
               }}
-              className="ft13"
+              className="ft13 ft13-mobile"
             >
               <b>12.5%</b>
             </p>
@@ -2004,17 +2004,19 @@ const App = () => {
                 left: "1148px",
                 whiteSpace: "nowrap",
               }}
-              className="ft12"
+              className="ft12 ft12-mobile"
             >
-              {((
-                ((+a1 + +a2 + +a3 + +a4 + +a5 + +a6) / 6) * 0.1 +
-                ((+b1 + +b2 + +b3 + +b4) / 4) * 0.1 +
-                ((+c1 + +c2 + +c3 + +c4 + +c5 + +c6 + +c7) / 7) * 0.2 +
-                ((+d1 + +d2 + +d3 + +d4 + +d5 + +d6) / 6) * 0.175 +
-                ((+e1 + +e2 + +e3 + +e4 + +e5 + +e6 + +e7 + +e8) / 8) * 0.15 +
-                ((+f1 + +f2 + +f3 + +f4 + +f5) / 5) * 0.15 +
-                ((+g1 + +g2 + +g3 + +g4 + +g5 + +g6 + +g7) / 7) * 0.125
-              ) * 20).toFixed(2)}%
+              {(
+                (((+a1 + +a2 + +a3 + +a4 + +a5 + +a6) / 6) * 0.1 +
+                  ((+b1 + +b2 + +b3 + +b4) / 4) * 0.1 +
+                  ((+c1 + +c2 + +c3 + +c4 + +c5 + +c6 + +c7) / 7) * 0.2 +
+                  ((+d1 + +d2 + +d3 + +d4 + +d5 + +d6) / 6) * 0.175 +
+                  ((+e1 + +e2 + +e3 + +e4 + +e5 + +e6 + +e7 + +e8) / 8) * 0.15 +
+                  ((+f1 + +f2 + +f3 + +f4 + +f5) / 5) * 0.15 +
+                  ((+g1 + +g2 + +g3 + +g4 + +g5 + +g6 + +g7) / 7) * 0.125) *
+                20
+              ).toFixed(2)}
+              %
             </p>
             <p
               style={{
@@ -2071,11 +2073,11 @@ const App = () => {
                 left: "214px",
                 whiteSpace: "nowrap",
               }}
-              className="ft15"
+              className="ft15 ft15-mobile"
             >
-              The design and information contained in the Self-Score Your Reward Pitch,
-              and the name Being Investable remain the property of John C H
-              Perry ©2023
+              The design and information contained in the Self-Score Your Reward
+              Pitch, and the name Being Investable remain the property of John C
+              H Perry ©2023
             </p>
             <p
               style={{
@@ -2084,7 +2086,7 @@ const App = () => {
                 left: "214px",
                 whiteSpace: "nowrap",
               }}
-              className="ft15"
+              className="ft15 ft15-mobile"
             >
               Mail: Increasing Returns Suite 760, 585 Little Collins Street,
               Melbourne, VIC 3000 Australia. Email: hello@increasingreturns.com

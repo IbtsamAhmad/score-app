@@ -313,8 +313,9 @@ justify-content: center; */
         top: 176px !important;
         position: relative !important;
             background: #bbbbbb;
-            width: 360px !important;
+            width: 378px !important;
             text-align: center;
+            /* display: inline; */
     }
 
 
@@ -334,13 +335,35 @@ justify-content: center; */
 
     .ft15 {
         position: relative !important;
-      left: 140px !important;
+        left: 140px !important;
         top: 176px !important;
         border: 1px solid black;
-        width: 360px !important;
+       width: 80px !important;
         text-align: center;
-            white-space: break-spaces !important;
+         white-space: break-spaces !important;
+        /* background: red; */
+        padding: 10px;
     }
+
+    .ft15-mobile{
+        background: transparent !important;
+        width: 360px !important;
+    }
+    .ft13-mobile{
+    /* background: yellow; */
+    border: 1px solid black;
+        padding: 14px;
+        display: inline;
+        top: 125px !important;
+        left: 290px !important;
+    }
+                .ft12-mobile {
+                    background: #bbbbbb;
+                    padding: 10px;
+                        border: 1px solid black;
+                        text-align: center;
+        
+                }
 
     .ft16 {
             font-size: 17px !important;
@@ -410,23 +433,23 @@ justify-content: center; */
         padding-bottom: 400px;
       }
     .page1-div {
-        margin-left: -25%;
+        margin-left: -28%;
     }
 
     .my-button {
-    left: 140px !important;
+    left: 100px !important;
     top: 205px !important;
     position: relative !important;
     }
 
     .pdf-button {
-       left: -20px !important;
+       left: -63px !important;
         top: 279px !important;
         position: relative !important;
     }
 
     .my-p {
-   left: 140px !important;
+    left: 22px !important;
     top: 190px !important;
     position: relative !important;
     font-size: 17px;
