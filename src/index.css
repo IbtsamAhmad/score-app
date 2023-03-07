@@ -657,5 +657,7 @@ justify-content: center; */
         top: 190px !important;
         position: relative !important;
         font-size: 17px;
+            width: 320px;
+                white-space: break-spaces !important;
     }
 }
