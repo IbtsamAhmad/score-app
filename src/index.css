@@ -259,8 +259,207 @@ justify-content: center; */
 
 }
 
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    .app-container {
+        margin-top: -64px;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /* overflow: scroll; */
 
-@media screen and (max-width: 500px) {
+    }
+
+    .page1-div {
+        /* border: 3px solid black; */
+        margin-left: 6% !important;
+    }
+
+    img {
+        display: none;
+    }
+
+    .my-input {
+        /* left: 300px !important;  */
+    }
+
+
+    .ft10 {
+        font-size: 18px;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        position: relative !important;
+    }
+
+    .ft11 {
+        font-size: 18px;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+    }
+
+    .ft12 {
+        font-size: 14px;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        white-space: break-spaces !important;
+        width: 300px !important;
+        text-align: left;
+    }
+
+    .ft13 {
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        background: #bbbbbb;
+        width: 378px !important;
+        text-align: center;
+        /* display: inline; */
+    }
+
+
+    .ft14 {
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        /* background: red !important; */
+        padding: 0px;
+        font-size: 13px;
+        width: 320px !important;
+        white-space: break-spaces !important;
+        position: relative !important;
+        text-align: left;
+
+    }
+
+    .ft15 {
+        position: relative !important;
+        left: 140px !important;
+        top: 176px !important;
+        border: 1px solid black;
+        width: 80px !important;
+        text-align: center;
+        white-space: break-spaces !important;
+        /* background: red; */
+        padding: 10px;
+    }
+
+    .ft15-mobile {
+        background: transparent !important;
+        width: 360px !important;
+    }
+
+    .ft13-mobile {
+        /* background: yellow; */
+        border: 1px solid black;
+        padding: 14px;
+        display: inline;
+        top: 125px !important;
+        left: 290px !important;
+    }
+
+    .ft12-mobile {
+        background: #bbbbbb;
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+
+    }
+
+    .ft16 {
+        font-size: 17px !important;
+        position: relative !important;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        white-space: break-spaces !important;
+        width: 360px !important;
+    }
+
+    .ft17 {
+        font-size: 14px !important;
+        position: relative !important;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        white-space: break-spaces !important;
+        width: 360px !important;
+    }
+
+    .ft18 {
+        font-size: 14px !important;
+        position: relative !important;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        white-space: break-spaces !important;
+        width: 360px !important;
+    }
+
+    .ft19 {
+        position: relative !important;
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        white-space: break-spaces !important;
+        width: 360px !important;
+    }
+
+    .my-input {
+        left: 140px !important;
+        top: 176px !important;
+        position: relative !important;
+        margin-bottom: 10px !important;
+    }
+
+
+
+    form {
+        width: 100%;
+
+    }
+
+    .form-input {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .submit-btn {
+        width: 120px;
+    }
+
+    .App {
+        padding-bottom: 400px;
+    }
+
+    .page1-div {
+        margin-left: -28%;
+    }
+
+    .my-button {
+        left: 100px !important;
+        top: 205px !important;
+        position: relative !important;
+    }
+
+    .pdf-button {
+        left: -63px !important;
+        top: 279px !important;
+        position: relative !important;
+    }
+
+    .my-p {
+        left: 22px !important;
+        top: 190px !important;
+        position: relative !important;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .app-container {
         margin-top: -64px;
         width: 100%;
