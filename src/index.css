@@ -204,15 +204,16 @@ justify-content: center; */
     /* width: 160px; */
     font-size: 20px;
     font-weight: bold;
+        white-space: break-spaces !important;
 }
 
 .my-button {
-    top: 2300px;
+    top: 2380px;
     padding: 10px;
     z-index: 10;
     border: none;
     border-radius: 4px;
-    left: 39%;
+    left: 16%;
     outline: none;
     position: absolute;
     background: linear-gradient(15deg, #20BF55, #01BAEF);
@@ -224,12 +225,12 @@ justify-content: center; */
 
 
 .pdf-button {
-    top: 2300px;
+    top: 2380px;
     padding: 10px;
     z-index: 10;
     border: none;
     border-radius: 4px;
-    left: 55%;
+    left: 30%;
     outline: none;
     position: absolute;
     background: linear-gradient(135deg, #20BF55, #01BAEF);
@@ -239,6 +240,14 @@ justify-content: center; */
     font-weight: bold;
 }
 
+@media screen and (min-width: 1501px) and (max-width: 1700px) {
+  .my-button{
+    left: 43%;
+  }
+  .pdf-button{
+    left: 60%;
+  }
+}
 
 @media screen and (min-width: 1501px) {
     .page1-div {
@@ -249,6 +258,7 @@ justify-content: center; */
 
     .my-p {
         margin-left: 8%;
+            white-space: break-spaces !important;
     }
 }
 
@@ -260,6 +270,7 @@ justify-content: center; */
 }
 
 @media screen and (min-width: 601px) and (max-width: 1300px) {
+    
     .app-container {
         margin-top: -64px;
         width: 100%;
@@ -440,19 +451,19 @@ justify-content: center; */
     }
 
     .my-button {
-        left: 100px !important;
+        left: 22% !important;
         top: 205px !important;
         position: relative !important;
     }
 
     .pdf-button {
-        left: -63px !important;
+        left: 9% !important;
         top: 279px !important;
         position: relative !important;
     }
 
     .my-p {
-        left: 22px !important;
+        left: 18% !important;
         top: 190px !important;
         position: relative !important;
         font-size: 17px;
@@ -651,6 +662,7 @@ justify-content: center; */
     }
 
     .my-p {
+            white-space: break-spaces !important;
         left: 22px !important;
         top: 190px !important;
         position: relative !important;
